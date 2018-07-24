@@ -11,9 +11,9 @@ matrix:
 
 script:
     - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-        scons p=linux t=release b=64
+        scons p=linux t=release b=64;
       fi
       
       if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-        scons p=osx t=release b=64
+        scons p=osx t=release b=64;
       fi

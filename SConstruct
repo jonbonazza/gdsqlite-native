@@ -16,6 +16,8 @@ if platform == 'linux':
 	if ARGUMENTS.get('use_llvm', 'no') == 'yes':
 		env['CXX'] = 'clang++';
 	
+	env.append(CCFLAGS = ['-std=c99']);
+	
 	if bits == '32':
 		env.Append(CCFLAGS = [ '-m32' ]);
 		env.Append(LINKFLAGS = [ '-m32' ]);
